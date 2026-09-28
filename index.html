@@ -1,163 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Afterbite: know how every meal will make you feel</title>
-    <meta name="description" content="Snap a photo of your meal. Afterbite counts the calories and macros and predicts your energy, blood sugar spike and crash risk, before you eat it." />
-    <meta property="og:title" content="Afterbite" />
-    <meta property="og:description" content="Know how every meal will make you feel, before you eat it." />
-    <meta property="og:image" content="images/logo.png" />
-    <link rel="icon" href="images/favicon.png" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="wrap nav">
-      <a class="brand" href="./"><img src="images/logo.png" alt="" />Afterbite</a>
-      <nav class="nav-links">
-        <a class="hide-sm" href="#features">Features</a>
-        <a class="hide-sm" href="#faq">FAQ</a>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Afterbite — AI Calorie Tracker That Shows How Food Makes You Feel | iPhone App</title>
+<meta name="description" content="Afterbite is an AI calorie tracker for iPhone. Snap a photo of your meal, scan a barcode or a nutrition label, and see calories, macros, a health score and how the meal will affect your energy, blood sugar and cravings." />
+<meta name="keywords" content="calorie tracker, AI calorie counter, food scanner, macro tracker, barcode scanner calories, nutrition label scanner, blood sugar spike, energy crash, meal tracker, weight loss app" />
+<link rel="canonical" href="https://maguid10.github.io/afterbite-site/" />
+<meta name="theme-color" content="#FFF7EE" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Afterbite" />
+<meta property="og:title" content="Afterbite — Know how every meal will make you feel" />
+<meta property="og:description" content="Snap your meal. Get calories, macros and your energy curve before you take a bite." />
+<meta property="og:url" content="https://maguid10.github.io/afterbite-site/" />
+<meta property="og:image" content="https://maguid10.github.io/afterbite-site/images/og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Afterbite — Know how every meal will make you feel" />
+<meta name="twitter:description" content="Snap your meal. Get calories, macros and your energy curve before you take a bite." />
+<meta name="twitter:image" content="https://maguid10.github.io/afterbite-site/images/og.jpg" />
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="landing.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Afterbite",
+  "operatingSystem": "iOS",
+  "applicationCategory": "HealthApplication",
+  "description": "An AI calorie tracker. Scan meals, barcodes and nutrition labels; see calories, macros, a health score and how each meal will affect your energy.",
+  "url": "https://maguid10.github.io/afterbite-site/",
+  "image": "https://maguid10.github.io/afterbite-site/images/icon.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How accurate are the calories?", "acceptedAnswer": { "@type": "Answer", "text": "Afterbite recognizes each ingredient and estimates the portion from the photo. You can change the servings or edit any value, and barcodes and nutrition labels give you the exact numbers." } },
+    { "@type": "Question", "name": "Do I need an account?", "acceptedAnswer": { "@type": "Answer", "text": "No. There's no sign-up. Your log stays on your iPhone." } },
+    { "@type": "Question", "name": "Does Afterbite work with Apple Health?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Workouts from Apple Health count toward your day, and the meals and weight you log are saved to Health." } },
+    { "@type": "Question", "name": "How much does Afterbite cost?", "acceptedAnswer": { "@type": "Answer", "text": "Afterbite Premium is $29.99 a year with a 3-day free trial, or $9.99 a month (US prices; the app shows the price in your currency). Cancel anytime." } },
+    { "@type": "Question", "name": "How do I cancel my subscription?", "acceptedAnswer": { "@type": "Answer", "text": "Open the Settings app on your iPhone, tap your name, then Subscriptions, and choose Afterbite. You can cancel anytime, including during the free trial." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ Header ============ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Afterbite home">
+      <img src="images/icon.png" alt="" width="40" height="40" />
+      <span>Afterbite</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Free trial</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="store-badge badge-header" href="./#pricing"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="120" height="40" /></a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" id="mobile-menu" aria-label="Mobile" hidden>
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#pricing">Free trial</a>
+    <a href="#faq">FAQ</a>
+    <a class="store-badge badge-menu" href="./#pricing"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="180" height="60" /></a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="container hero-inner reveal">
+    <h1>Snap your meal.<br /><span class="accent">Know how you’ll feel.</span></h1>
+    <p class="lead">Calories and macros from a single photo, plus your energy, blood sugar spike and crash risk, before you take a bite.</p>
+    <div class="hero-cta">
+      <a class="store-badge badge-hero" href="./#pricing"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" width="180" height="60" /></a>
+    </div>
+    <p class="fine">Free to download · 3-day free trial · iPhone</p>
+
+    <p class="kicker">Log it your way</p>
+    <ul class="theme-row">
+      <li><a href="#features">Meal photos</a></li>
+      <li><a href="#features">Barcodes</a></li>
+      <li><a href="#features">Food labels</a></li>
+      <li><a href="#features">Food search</a></li>
+      <li><a href="#features">Water</a></li>
+      <li><a href="#features">Workouts</a></li>
+      <li><a href="#features">Apple Health</a></li>
+    </ul>
+  </div>
+
+  <div class="container hero-phone reveal">
+    <img src="images/screens/home-phone.webp" alt="Afterbite on iPhone: calories eaten today, macros, day score, water and recent meals" width="620" height="1243" />
+  </div>
+</section>
+
+<!-- ============ Features (accent section) ============ -->
+<div class="wave wave-top" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,48 C120,8 240,8 360,40 C480,72 600,72 720,40 C840,8 960,8 1080,40 C1200,72 1320,72 1440,40 L1440,80 L0,80 Z"/></svg></div>
+<section class="accent-section" id="features">
+  <div class="container">
+    <div class="section-intro reveal">
+      <h2 class="section-title light">Calories tell you what you ate.<br />Afterbite tells you what it’ll do.</h2>
+      <p class="lead light">Every scan comes with the numbers you need and a prediction of your next three hours: steady energy, or a crash on the way.</p>
+    </div>
+
+    <div class="features reveal">
+      <div class="feature-list" role="tablist" aria-label="Afterbite features">
+        <details class="feature" open data-shot="images/screens/scan-phone.webp">
+          <summary role="tab">
+            <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3.5"/></svg></span>
+            <span class="f-title">Snap it, done</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="f-body">
+            <p>Point your camera at your plate. Afterbite recognizes every ingredient, estimates the portion and logs calories and macros in seconds. Not near your food? Describe it instead.</p>
+            <ul class="ticks"><li>Every ingredient, weighed and counted</li><li>Hidden calories like oil and sauces</li><li>Pick a photo from your library</li></ul>
+            <img class="f-shot-inline" src="images/screens/scan-phone.webp" alt="Scanning a plate of pasta with Afterbite" loading="lazy" />
+          </div>
+        </details>
+
+        <details class="feature" data-shot="images/screens/barcode-phone.webp">
+          <summary role="tab">
+            <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6v12M7 6v12M10.5 6v12M14 6v12M16.5 6v12M20 6v12"/></svg></span>
+            <span class="f-title">Barcodes and food labels</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="f-body">
+            <p>Packaged food? Scan the barcode, or snap the nutrition label for exact numbers per serving. Millions of products, from your supermarket shelf.</p>
+            <ul class="ticks"><li>Instant barcode lookup</li><li>Reads any nutrition label</li><li>Search everyday foods and brands</li></ul>
+            <img class="f-shot-inline" src="images/screens/barcode-phone.webp" alt="Scanning a barcode on a pasta package" loading="lazy" />
+          </div>
+        </details>
+
+        <details class="feature" data-shot="images/screens/meal-phone.webp">
+          <summary role="tab">
+            <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13h4l3-8 4 14 3-6h4"/></svg></span>
+            <span class="f-title">How you’ll feel after</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="f-body">
+            <p>Every meal gets a grade, a health score and a forecast of your energy, blood sugar spike and crash risk. Then a few easy swaps to feel steadier and fuller for longer.</p>
+            <ul class="ticks"><li>A to E grade and 0–100 health score</li><li>Energy curve and crash risk</li><li>Smarter swaps for this exact meal</li></ul>
+            <img class="f-shot-inline" src="images/screens/meal-phone.webp" alt="Meal detail: grilled chicken with rice and broccoli, 482 kcal, grade A" loading="lazy" />
+          </div>
+        </details>
+
+        <details class="feature" data-shot="images/screens/progress-phone.webp">
+          <summary role="tab">
+            <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20V12M10 20V6M15 20v-9M20 20V4"/></svg></span>
+            <span class="f-title">Progress you can see</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="f-body">
+            <p>Your weight trend toward your goal, your BMI, and your calories and macros by week or month. Workouts from Apple Health count toward your day automatically.</p>
+            <ul class="ticks"><li>Weight chart and goal tracking</li><li>Weekly and monthly nutrition</li><li>Works with Apple Health</li></ul>
+            <img class="f-shot-inline" src="images/screens/progress-phone.webp" alt="Progress screen with weight chart, BMI and calories" loading="lazy" />
+          </div>
+        </details>
+
+        <details class="feature" data-shot="images/screens/streak-phone.webp">
+          <summary role="tab">
+            <span class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.8 1 2.8 2 3.2C11 9 11 6 12 3z"/></svg></span>
+            <span class="f-title">Streaks that keep you going</span>
+            <span class="chev" aria-hidden="true"></span>
+          </summary>
+          <div class="f-body">
+            <p>Log a meal a day to grow your streak. Hit milestones to unlock rewards like your personal energy patterns, and a weekly streak freeze keeps a busy day from breaking it.</p>
+            <ul class="ticks"><li>Daily streak and milestones</li><li>Rewards that unlock insights</li><li>Water tracking and gentle reminders</li></ul>
+            <img class="f-shot-inline" src="images/screens/streak-phone.webp" alt="Streak screen with milestones and rewards" loading="lazy" />
+          </div>
+        </details>
+      </div>
+
+      <figure class="feature-phone" aria-hidden="true"><img id="feature-shot" src="images/screens/scan-phone.webp" alt="" /></figure>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div class="container steps-wrap" id="how-it-works">
+    <h2 class="section-title light reveal">Three steps to eating better</h2>
+    <div class="steps reveal" role="tablist">
+      <button class="step is-active" type="button" data-step="0" role="tab" aria-selected="true">
+        <span class="step-num"><svg class="cloud" viewBox="0 0 200 140" aria-hidden="true"><path d="M52 124c-26 0-44-17-44-40 0-21 16-37 37-39 5-22 25-37 48-37 21 0 39 12 46 30 4-1 7-1 11-1 24 0 42 18 42 42 0 25-19 45-45 45z"/></svg><b>01</b></span>
+        <span class="step-title">Tell us your goal</span>
+      </button>
+      <button class="step" type="button" data-step="1" role="tab" aria-selected="false">
+        <span class="step-num"><svg class="cloud" viewBox="0 0 200 140" aria-hidden="true"><path d="M52 124c-26 0-44-17-44-40 0-21 16-37 37-39 5-22 25-37 48-37 21 0 39 12 46 30 4-1 7-1 11-1 24 0 42 18 42 42 0 25-19 45-45 45z"/></svg><b>02</b></span>
+        <span class="step-title">Snap every meal</span>
+      </button>
+      <button class="step" type="button" data-step="2" role="tab" aria-selected="false">
+        <span class="step-num"><svg class="cloud" viewBox="0 0 200 140" aria-hidden="true"><path d="M52 124c-26 0-44-17-44-40 0-21 16-37 37-39 5-22 25-37 48-37 21 0 39 12 46 30 4-1 7-1 11-1 24 0 42 18 42 42 0 25-19 45-45 45z"/></svg><b>03</b></span>
+        <span class="step-title">Feel the difference</span>
+      </button>
+    </div>
+    <div class="bubble reveal" aria-live="polite">
+      <p data-copy="0">Answer a few quick questions about your body and your goal. Afterbite builds your daily calorie and macro plan in about a minute.</p>
+      <p data-copy="1" hidden>Take a photo, scan a barcode or snap a label. You get calories, macros and how the meal will make you feel, in seconds.</p>
+      <p data-copy="2" hidden>Try the suggested swaps, watch your energy steady out, and see your progress and your streak grow day by day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Free trial ============ -->
+<section class="pricing" id="pricing">
+  <div class="container narrow">
+    <div class="section-intro reveal">
+      <p class="trial-pill">3-day free trial</p>
+      <h2 class="section-title">Try everything.<br />Free for 3 days.</h2>
+      <p class="lead">Full access to Afterbite Premium, nothing to pay today. Love it, keep it. If not, cancel anytime before the trial ends.</p>
+    </div>
+
+    <article class="card price-card reveal">
+      <p class="card-label">Everything included</p>
+      <ul class="ticks dark">
+        <li>Unlimited AI scans: photos, barcodes and labels</li>
+        <li>How you’ll feel after every meal</li>
+        <li>Health score and smarter swaps</li>
+        <li>Progress, insights and streak rewards</li>
+        <li>Apple Health sync</li>
+      </ul>
+      <hr />
+      <div class="plans">
+        <div class="plan plan-best">
+          <span class="plan-badge">Save 75%</span>
+          <div><strong>Yearly</strong><small>3-day free trial, then $29.99/year</small></div>
+          <p class="plan-price">$2.50<span>/mo</span></p>
+        </div>
+        <div class="plan">
+          <div><strong>Monthly</strong><small>Billed monthly</small></div>
+          <p class="plan-price">$9.99<span>/mo</span></p>
+        </div>
+      </div>
+      <hr />
+      <ol class="trial-steps">
+        <li><span class="dot">1</span><div><strong>Today</strong><small>Unlock everything, free</small></div></li>
+        <li><span class="dot">2</span><div><strong>Day 2</strong><small>We remind you before it ends</small></div></li>
+        <li><span class="dot">3</span><div><strong>Day 3</strong><small>Keep going, or cancel anytime</small></div></li>
+      </ol>
+      <a class="btn btn-primary btn-block" href="./#pricing">Start your 3-day free trial</a>
+      <p class="note center">US prices shown; the app shows the price in your currency. No charge if you cancel before the trial ends.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FAQ + contact ============ -->
+<section class="faq" id="faq">
+  <div class="container narrow">
+    <div class="section-intro reveal">
+      <h2 class="section-title">Questions? We’ve got you.</h2>
+    </div>
+    <div class="card faq-card reveal">
+      <details class="qa" open>
+        <summary>How accurate are the calories?</summary>
+        <p>Afterbite recognizes each ingredient and estimates the portion from the photo, including hidden calories like cooking oil and sauces. You can change the servings or edit any value, and barcodes and nutrition labels give you the exact numbers.</p>
+      </details>
+      <details class="qa">
+        <summary>How does it know how I’ll feel?</summary>
+        <p>It looks at what drives your energy after eating: carbs and sugar, fiber, protein, fat and portion size. From that it predicts your energy curve, blood sugar spike and crash risk for a typical healthy adult. It’s a wellness guide, not medical advice.</p>
+      </details>
+      <details class="qa">
+        <summary>Do I need an account?</summary>
+        <p>No. There’s no sign-up. Your log stays on your iPhone, and meal photos are analyzed without being stored on our servers.</p>
+      </details>
+      <details class="qa">
+        <summary>Does it work with Apple Health?</summary>
+        <p>Yes. Workouts from Apple Health count toward your day, and the meals and weight you log are saved to Health.</p>
+      </details>
+      <details class="qa">
+        <summary>How do I cancel my subscription?</summary>
+        <p>Open the Settings app on your iPhone, tap your name, then Subscriptions, and choose Afterbite. You can cancel anytime, including during the free trial.</p>
+      </details>
+      <div class="contact">
+        <p>Still have a question?</p>
+        <a class="btn btn-outline" href="mailto:maguidguebre10@gmail.com">Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<div class="wave wave-top" aria-hidden="true"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,48 C120,8 240,8 360,40 C480,72 600,72 720,40 C840,8 960,8 1080,40 C1200,72 1320,72 1440,40 L1440,80 L0,80 Z"/></svg></div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-mark">
+      <img src="images/icon.png" alt="Afterbite" width="96" height="96" />
+    </div>
+    <a class="store-badge badge-footer" href="./#pricing"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us" alt="Download on the App Store" width="180" height="60" /></a>
+    <p class="footer-title">Eat for how<br />you want to feel</p>
+
+    <div class="footer-links">
+      <div>
+        <p>Afterbite</p>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#pricing">Free trial</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <p>Help</p>
         <a href="support.html">Support</a>
-      </nav>
-    </header>
-
-    <main>
-      <div class="wrap hero">
-        <div>
-          <span class="eyebrow">AI calorie tracker</span>
-          <h1>Know how every meal will make you feel.</h1>
-          <p class="lead">Snap a photo. Afterbite counts the calories and macros, then shows your energy, blood sugar spike and crash risk before you eat.</p>
-          <a class="btn soon" aria-disabled="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.38-3.69zM14.1 5.84c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.1 1.76-.96 2.8 1.01.08 2.05-.52 2.68-1.28z" /></svg>
-            Coming soon to the App Store
-          </a>
-          <p class="hero-note">Free to download · 3-day free trial of Premium</p>
-        </div>
-        <div class="hero-art">
-          <img src="images/hero.png" alt="A mango with cards showing its health score, calories, carbs and how it will make you feel" width="800" height="699" />
-        </div>
+        <a href="support.html#cancel">Cancel subscription</a>
+        <a href="mailto:maguidguebre10@gmail.com">Contact</a>
       </div>
-
-      <section id="features">
-        <div class="wrap">
-          <div class="section-head">
-            <h2>More than a calorie count</h2>
-            <p>Every scan tells you what’s on the plate and what it will do to your next three hours.</p>
-          </div>
-          <div class="grid">
-            <div class="card">
-              <div class="icon">📸</div>
-              <h3>Scan anything</h3>
-              <p>A photo of your plate, a barcode or a nutrition label. Or just describe what you ate.</p>
-            </div>
-            <div class="card">
-              <div class="icon">⚡️</div>
-              <h3>Your energy curve</h3>
-              <p>See how steady your energy will be, and whether a crash is coming an hour later.</p>
-            </div>
-            <div class="card">
-              <div class="icon">❤️</div>
-              <h3>Health score</h3>
-              <p>A clear 0–100 score for every meal, weighing protein, fiber, sugar and portion size.</p>
-            </div>
-            <div class="card">
-              <div class="icon">🔄</div>
-              <h3>Smarter swaps</h3>
-              <p>Small, specific changes to this exact meal that keep you full and focused for longer.</p>
-            </div>
-            <div class="card">
-              <div class="icon">📈</div>
-              <h3>Progress and insights</h3>
-              <p>Weight, macros, water and streaks, with your best meals and trends over time.</p>
-            </div>
-            <div class="card">
-              <div class="icon">🍎</div>
-              <h3>Works with Apple Health</h3>
-              <p>Your workouts count toward your day, and your meals and weight are saved to Health.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <div class="section-head">
-            <h2>How it works</h2>
-          </div>
-          <div class="steps">
-            <div class="step">
-              <h3>Snap your meal</h3>
-              <p>Take a photo before you eat. Afterbite recognizes each ingredient and estimates the portion.</p>
-            </div>
-            <div class="step">
-              <h3>See how you’ll feel</h3>
-              <p>Calories, macros, a health score and a prediction of your energy for the next few hours.</p>
-            </div>
-            <div class="step">
-              <h3>Eat a little better</h3>
-              <p>Try a suggested swap, keep your streak going and watch your progress add up.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq">
-        <div class="wrap">
-          <div class="section-head">
-            <h2>Questions</h2>
-          </div>
-          <div class="faq">
-            <details>
-              <summary>How accurate are the calories?</summary>
-              <p>Afterbite estimates portions from what it can see, like any photo-based tracker. You can adjust the portion or edit any value, and barcodes and nutrition labels give exact numbers.</p>
-            </details>
-            <details>
-              <summary>Do I need an account?</summary>
-              <p>No. There’s no sign-up. Your log stays on your iPhone.</p>
-            </details>
-            <details>
-              <summary>What happens to my meal photos?</summary>
-              <p>A photo is sent to our server only to analyze it, and isn’t stored there. Read the <a href="privacy.html">Privacy Policy</a> for details.</p>
-            </details>
-            <details>
-              <summary>How much does it cost?</summary>
-              <p>Afterbite Premium is a yearly plan with a 3-day free trial, or a monthly plan. Prices are shown in the app in your currency. Cancel anytime in your iPhone Settings.</p>
-            </details>
-            <details>
-              <summary>Is this medical advice?</summary>
-              <p>No. Afterbite gives estimates for general wellness. If you manage diabetes or another condition, follow your clinician’s guidance.</p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <div class="band">
-            <img src="images/logo.png" alt="" />
-            <div>
-              <h2>Eat for how you want to feel.</h2>
-              <p>Afterbite is coming soon to iPhone.</p>
-            </div>
-            <a class="btn soon" aria-disabled="true">Coming soon</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="wrap">
-        <div class="footer-row">
-          <span>© 2026 Afterbite</span>
-          <nav class="footer-links">
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="support.html">Support</a>
-          </nav>
-        </div>
-        <p class="disclaimer">Afterbite gives nutrition estimates for general wellness. It is not a medical device and does not give medical advice. Food data from USDA FoodData Central and Open Food Facts (ODbL).</p>
+      <div>
+        <p>Legal</p>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
       </div>
-    </footer>
-  </body>
+    </div>
+    <p class="copyright">© 2026 Afterbite. All rights reserved. Nutrition estimates for general wellness, not medical advice. Food data from USDA FoodData Central and Open Food Facts (ODbL).</p>
+  </div>
+</footer>
+
+<script src="landing.js" defer></script>
+</body>
 </html>
